@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #3a3a52, #252539);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-player {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.now-playing {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#artist {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 20px 0;
+}
+
+.btn {
+  font-size: 24px;
+  padding: 10px 14px;
+  background: #1db954;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #17a34a;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#current-time, #duration {
+  font-size: 12px;
+  width: 40px;
+  text-align: center;
+}
+
+.progress-bar {
+  flex: 1;
+  background: #444;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress {
+  background: #1db954;
+  height: 100%;
+  width: 0%;
+  border-radius: 3px;
+}
+
+.volume-container {
+  margin: 20px 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#volume {
+  flex: 1;
+}
+
+.playlist {
+  margin-top: 20px;
+}
+
+.playlist h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 5px;
+}
+
+.playlist ul {
+  list-style: none;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.playlist li {
+  padding: 6px 10px;
+  margin-bottom: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.playlist li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.playlist li.active {
+  background: #1db954;
+  color: white;
+}
